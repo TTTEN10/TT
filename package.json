@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-os-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive portfolio for Thibaut Tenenbaum — Project Manager, Ergonomist & Work Psychologist",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "start": "npm run build && npx serve dist -l 3000"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

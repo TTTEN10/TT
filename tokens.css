@@ -1,0 +1,254 @@
+/* ============================================================
+   Portfolio OS — Liquid Glass Design Tokens
+   Light grey base · purple + grey + green accents
+   ============================================================ */
+
+:root {
+  /* --- Shared wallpaper (desktop + window reflection) --- */
+  --wallpaper:
+    radial-gradient(ellipse 90% 75% at 88% 15%, rgba(147, 51, 234, 0.11), transparent 52%),
+    radial-gradient(ellipse 85% 70% at 10% 82%, rgba(34, 197, 94, 0.32), transparent 54%),
+    radial-gradient(ellipse 78% 68% at 62% 28%, rgba(45, 212, 168, 0.24), transparent 56%),
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255, 255, 255, 0.48), transparent 60%),
+    linear-gradient(145deg, #ececf0 0%, #e2e2ea 40%, #d8d8e2 100%);
+
+  /* --- Canvas (light grey base) --- */
+  --bg-0: #e8e8ee;
+  --bg-1: #dedee6;
+  --bg-2: rgba(255, 255, 255, 0.42);
+  --bg-3: rgba(255, 255, 255, 0.58);
+  --bg-4: rgba(255, 255, 255, 0.72);
+
+  /* --- Liquid glass surfaces (light mode) --- */
+  --glass-blur: blur(48px) saturate(195%);
+  --glass-blur-light: blur(32px) saturate(175%);
+  --glass: rgba(255, 255, 255, 0.38);
+  --glass-strong: rgba(255, 255, 255, 0.52);
+  --glass-light: rgba(255, 255, 255, 0.28);
+  --glass-solid: rgba(255, 255, 255, 0.72);
+
+  /* Window interior tint — translucent; wallpaper shows through */
+  --win-wash:
+    radial-gradient(ellipse 90% 70% at 12% 8%, rgba(147, 51, 234, 0.09), transparent 52%),
+    radial-gradient(ellipse 80% 65% at 92% 88%, rgba(34, 197, 94, 0.2), transparent 54%),
+    radial-gradient(ellipse 70% 55% at 38% 72%, rgba(45, 212, 168, 0.16), transparent 50%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.06) 100%);
+
+  /* Borders / liquid edge highlights */
+  --line: rgba(0, 0, 0, 0.06);
+  --line-2: rgba(0, 0, 0, 0.1);
+  --line-3: rgba(0, 0, 0, 0.14);
+  --glass-edge: rgba(255, 255, 255, 0.92);
+  --glass-edge-soft: rgba(255, 255, 255, 0.55);
+
+  /* --- Text (dark on light) --- */
+  --tx-0: #1c1c22;
+  --tx-1: rgba(28, 28, 34, 0.72);
+  --tx-2: rgba(28, 28, 34, 0.52);
+  --tx-3: rgba(28, 28, 34, 0.36);
+
+  /* --- Accent: grey --- */
+  --ac: #6b7280;
+  --ac-bright: #4b5563;
+  --ac-dim: #9ca3af;
+  --ac-deep: #374151;
+  --ac-glow: rgba(107, 114, 128, 0.28);
+  --ac-wash: rgba(107, 114, 128, 0.1);
+  --ac-line: rgba(107, 114, 128, 0.22);
+
+  /* --- Accent: purple --- */
+  --purple: #9333ea;
+  --purple-bright: #a855f7;
+  --purple-dim: #7e22ce;
+  --purple-glow: rgba(147, 51, 234, 0.22);
+  --purple-wash: rgba(147, 51, 234, 0.08);
+  --purple-line: rgba(147, 51, 234, 0.28);
+
+  /* --- Accent: green --- */
+  --green: #22c55e;
+  --green-bright: #4ade80;
+  --green-dim: #16a34a;
+  --green-deep: #15803d;
+  --green-glow: rgba(34, 197, 94, 0.38);
+  --green-wash: rgba(34, 197, 94, 0.16);
+  --green-line: rgba(34, 197, 94, 0.32);
+
+  /* Supporting signal colors */
+  --ok: #22c55e;
+  --warn: #f59e0b;
+  --info: #9333ea;
+  --rose: #e879a9;
+
+  /* --- Radius --- */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-2xl: 40px;
+  --r-pill: 999px;
+
+  /* --- Liquid glass shadows (light mode) --- */
+  --sh-win:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.03) inset,
+    0 24px 64px -12px rgba(0, 0, 0, 0.12),
+    0 8px 24px -8px rgba(34, 197, 94, 0.12),
+    0 8px 24px -8px rgba(147, 51, 234, 0.08);
+  --sh-pop:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 28px 70px -16px rgba(0, 0, 0, 0.14);
+  --sh-glow:
+    0 0 0 1px rgba(255, 255, 255, 0.7),
+    0 0 40px -8px var(--purple-glow);
+  --sh-btn:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 4px 16px -4px rgba(0, 0, 0, 0.08);
+
+  /* --- Type --- */
+  --f-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
+  --f-disp: "Space Grotesk", var(--f-sans);
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --wallpaper:
+      radial-gradient(ellipse 90% 75% at 88% 15%, rgba(147, 51, 234, 0.18), transparent 52%),
+      radial-gradient(ellipse 85% 70% at 10% 82%, rgba(34, 197, 94, 0.14), transparent 54%),
+      radial-gradient(ellipse 78% 68% at 62% 28%, rgba(45, 212, 168, 0.12), transparent 56%),
+      radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255, 255, 255, 0.04), transparent 60%),
+      linear-gradient(145deg, #12121a 0%, #0d0d12 40%, #09090f 100%);
+
+    --bg-0: #0d0d12;
+    --bg-1: #14141a;
+    --bg-2: rgba(30, 30, 40, 0.42);
+    --bg-3: rgba(30, 30, 40, 0.58);
+    --bg-4: rgba(30, 30, 40, 0.72);
+
+    --glass: rgba(30, 30, 40, 0.38);
+    --glass-strong: rgba(30, 30, 40, 0.52);
+    --glass-light: rgba(30, 30, 40, 0.28);
+    --glass-solid: rgba(30, 30, 40, 0.72);
+
+    --win-wash:
+      radial-gradient(ellipse 90% 70% at 12% 8%, rgba(147, 51, 234, 0.14), transparent 52%),
+      radial-gradient(ellipse 80% 65% at 92% 88%, rgba(34, 197, 94, 0.1), transparent 54%),
+      radial-gradient(ellipse 70% 55% at 38% 72%, rgba(45, 212, 168, 0.08), transparent 50%),
+      linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+
+    --line: rgba(255, 255, 255, 0.08);
+    --line-2: rgba(255, 255, 255, 0.12);
+    --line-3: rgba(255, 255, 255, 0.16);
+    --glass-edge: rgba(255, 255, 255, 0.18);
+    --glass-edge-soft: rgba(255, 255, 255, 0.1);
+
+    --tx-0: #f0f0f5;
+    --tx-1: rgba(240, 240, 245, 0.72);
+    --tx-2: rgba(240, 240, 245, 0.52);
+    --tx-3: rgba(240, 240, 245, 0.36);
+
+    --ac: #9ca3af;
+    --ac-bright: #d1d5db;
+    --ac-dim: #6b7280;
+    --ac-deep: #e5e7eb;
+    --ac-glow: rgba(156, 163, 175, 0.28);
+    --ac-wash: rgba(156, 163, 175, 0.12);
+    --ac-line: rgba(156, 163, 175, 0.28);
+
+    --purple-bright: #c084fc;
+    --purple-glow: rgba(168, 85, 247, 0.32);
+    --purple-wash: rgba(147, 51, 234, 0.14);
+    --purple-line: rgba(168, 85, 247, 0.36);
+
+    --green-bright: #86efac;
+    --green-glow: rgba(74, 222, 128, 0.28);
+    --green-wash: rgba(34, 197, 94, 0.14);
+    --green-line: rgba(74, 222, 128, 0.32);
+
+    --sh-win:
+      0 1px 0 rgba(255, 255, 255, 0.08) inset,
+      0 -1px 0 rgba(0, 0, 0, 0.2) inset,
+      0 24px 64px -12px rgba(0, 0, 0, 0.45),
+      0 8px 24px -8px rgba(34, 197, 94, 0.08),
+      0 8px 24px -8px rgba(147, 51, 234, 0.12);
+    --sh-pop:
+      0 1px 0 rgba(255, 255, 255, 0.08) inset,
+      0 28px 70px -16px rgba(0, 0, 0, 0.5);
+    --sh-glow:
+      0 0 0 1px rgba(255, 255, 255, 0.12),
+      0 0 40px -8px var(--purple-glow);
+    --sh-btn:
+      0 1px 0 rgba(255, 255, 255, 0.1) inset,
+      0 4px 16px -4px rgba(0, 0, 0, 0.35);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+    background-clip: padding-box;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+
+body {
+  font-family: var(--f-sans);
+  background: var(--bg-0);
+  color: var(--tx-0);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  font-feature-settings: "ss01", "cv01";
+}
+
+#root { height: 100vh; width: 100vw; }
+
+::selection {
+  background: color-mix(in oklab, var(--purple) 30%, rgba(107, 114, 128, 0.2));
+  color: var(--tx-0);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 99px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.2); background-clip: padding-box; }
+
+.mono { font-family: var(--f-mono); }
+.disp { font-family: var(--f-disp); }
+
+@keyframes jp-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes jp-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes jp-spin { to { transform: rotate(360deg); } }
+@keyframes jp-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes jp-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
